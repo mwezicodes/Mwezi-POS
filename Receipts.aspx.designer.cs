@@ -7,101 +7,92 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Mwezi_POS.Sources.Inventory
+namespace Mwezi_POS.Sources.Sales
 {
 
 
-    public partial class Inventtory
+    public partial class Receipts
     {
 
         /// <summary>
-        /// mainEdit control.
+        /// MainV control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel mainEdit;
+        protected global::System.Web.UI.WebControls.Panel MainV;
 
         /// <summary>
-        /// Idpr control.
+        /// srci control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl Idpr;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText srci;
 
         /// <summary>
-        /// itnam control.
+        /// Srch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText itnam;
+        protected global::System.Web.UI.WebControls.Button Srch;
 
         /// <summary>
-        /// itprc control.
+        /// ReceiptsTab control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl itprc;
+        protected global::System.Web.UI.WebControls.GridView ReceiptsTab;
 
         /// <summary>
-        /// itqty control.
+        /// pnlEdit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl itqty;
+        protected global::System.Web.UI.WebControls.Panel pnlEdit;
 
         /// <summary>
-        /// btnSave control.
+        /// ReceiptsTabe control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSave;
+        protected global::System.Web.UI.WebControls.GridView ReceiptsTabe;
 
         /// <summary>
-        /// btnDelete control.
+        /// lblTotal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnDelete;
+        protected global::System.Web.UI.WebControls.Label lblTotal;
 
         /// <summary>
-        /// childCls control.
+        /// btnCompleteUp control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button childCls;
+        protected global::System.Web.UI.WebControls.LinkButton btnCompleteUp;
 
         /// <summary>
-        /// childEdit control.
+        /// btnClose control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel childEdit;
-
-        /// <summary>
-        /// InventoryTab control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView InventoryTab;
+        protected global::System.Web.UI.WebControls.LinkButton btnClose;
     }
 }

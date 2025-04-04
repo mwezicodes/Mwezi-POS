@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Mwezi_POS.Sources.Inventory
+namespace Mwezi_POS.Sources.Employees
 {
 
 
-    public partial class Inventtory
+    public partial class Passman
     {
 
         /// <summary>
@@ -33,40 +33,40 @@ namespace Mwezi_POS.Sources.Inventory
         protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl Idpr;
 
         /// <summary>
-        /// itnam control.
+        /// name control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText itnam;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText name;
 
         /// <summary>
-        /// itprc control.
+        /// mail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl itprc;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl mail;
 
         /// <summary>
-        /// itqty control.
+        /// pass control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl itqty;
+        protected global::System.Web.UI.HtmlControls.HtmlInputPassword pass;
 
         /// <summary>
-        /// btnSave control.
+        /// btnAddItem control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSave;
+        protected global::System.Web.UI.WebControls.Button btnAddItem;
 
         /// <summary>
         /// btnDelete control.
@@ -96,12 +96,12 @@ namespace Mwezi_POS.Sources.Inventory
         protected global::System.Web.UI.WebControls.Panel childEdit;
 
         /// <summary>
-        /// InventoryTab control.
+        /// usersTab control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView InventoryTab;
+        protected global::System.Web.UI.WebControls.GridView usersTab;
     }
 }

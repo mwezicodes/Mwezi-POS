@@ -11,17 +11,8 @@ namespace Mwezi_POS.Sources.Inventory
 {
 
 
-    public partial class Inventtory
+    public partial class Inventoryadd
     {
-
-        /// <summary>
-        /// mainEdit control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel mainEdit;
 
         /// <summary>
         /// Idpr control.
@@ -60,48 +51,12 @@ namespace Mwezi_POS.Sources.Inventory
         protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl itqty;
 
         /// <summary>
-        /// btnSave control.
+        /// btnAddItem control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSave;
-
-        /// <summary>
-        /// btnDelete control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnDelete;
-
-        /// <summary>
-        /// childCls control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button childCls;
-
-        /// <summary>
-        /// childEdit control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel childEdit;
-
-        /// <summary>
-        /// InventoryTab control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView InventoryTab;
+        protected global::System.Web.UI.WebControls.Button btnAddItem;
     }
 }

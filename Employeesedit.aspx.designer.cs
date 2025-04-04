@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Mwezi_POS.Sources.Inventory
+namespace Mwezi_POS.Sources.Employees
 {
 
 
-    public partial class Inventtory
+    public partial class Employeesedit
     {
 
         /// <summary>
@@ -24,49 +24,112 @@ namespace Mwezi_POS.Sources.Inventory
         protected global::System.Web.UI.WebControls.Panel mainEdit;
 
         /// <summary>
-        /// Idpr control.
+        /// Idno control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl Idpr;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl Idno;
 
         /// <summary>
-        /// itnam control.
+        /// Email control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText itnam;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl Email;
 
         /// <summary>
-        /// itprc control.
+        /// Name control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl itprc;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText Name;
 
         /// <summary>
-        /// itqty control.
+        /// Phone control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl itqty;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText Phone;
 
         /// <summary>
-        /// btnSave control.
+        /// DOB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSave;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl DOB;
+
+        /// <summary>
+        /// RD control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl RD;
+
+        /// <summary>
+        /// Gender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList Gender;
+
+        /// <summary>
+        /// Address control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText Address;
+
+        /// <summary>
+        /// City control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText City;
+
+        /// <summary>
+        /// Country control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList Country;
+
+        /// <summary>
+        /// Role control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList Role;
+
+        /// <summary>
+        /// btnUpdate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnUpdate;
 
         /// <summary>
         /// btnDelete control.
@@ -96,12 +159,12 @@ namespace Mwezi_POS.Sources.Inventory
         protected global::System.Web.UI.WebControls.Panel childEdit;
 
         /// <summary>
-        /// InventoryTab control.
+        /// lvUsers control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView InventoryTab;
+        protected global::System.Web.UI.WebControls.GridView lvUsers;
     }
 }
