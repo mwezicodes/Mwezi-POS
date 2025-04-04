@@ -5,39 +5,40 @@
 
 <head runat="server">
     <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
     <link href="~/Styles/StyleSheet.css" rel="stylesheet" type="text/css" />
     <link href="~/Styles/sweetalert.css" rel="stylesheet" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="~/Scripts/jquery-3.7.0.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
     <script src="~/Scripts/bootstrap.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <title>MWEZI POS</title>
-    <style>
 
-
+<style>
 .overlay {
-  height: 100%;
+  height: 150%;
   width: 100%;
   display: none;
-  position: fixed;
-  z-index: 1;
+  position: absolute;
+  z-index: 900;
   top: 0;
   left: 0;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0, 0.9);
+  background-color: white;
+  margin: 55px auto;
 }
 
 .overlay-content {
-  position: relative;
-  top: 25%;
+  position: absolute;
+  top: 5%;
   width: 100%;
   text-align: center;
   margin-top: 30px;
@@ -46,63 +47,353 @@
 .overlay a {
   padding: 8px;
   text-decoration: none;
-  font-size: 36px;
-  color: #818181;
+  font-size: 17px;
+  color: darkblue;
   display: block;
   transition: 0.3s;
 }
 
 .overlay a:hover, .overlay a:focus {
-  color: #f1f1f1;
+  color: lightslategrey;
 }
 
 .overlay .closebtn {
   position: absolute;
   top: 20px;
   right: 45px;
-  font-size: 60px;
+  font-size: 40px;
 }
 
 @media screen and (max-height: 450px) {
   .overlay a {font-size: 20px}
   .overlay .closebtn {
-  font-size: 40px;
+  font-size: 20px;
   top: 15px;
   right: 35px;
   }
 }
+.sidenav {
+  margin: 40px auto;
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1001;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  color: #818181;
+  display: block;  
+  margin-left: 5px;
+}
+
+.sidenav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.btn:hover {
+    filter: brightness(90%);
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+}
+
+.text-success:hover {
+    background-color: #d4edda !important;
+}
+
+.text-primary:hover {
+    background-color: #cce5ff !important;
+}
+
+.text-secondary:hover {
+    background-color: #e2e3e5 !important;
+}
+.main {
+  margin-left: 160px;
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 14px;}
+}
+.content 
+{
+    margin:0;
+    padding: 10px;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+    .card:hover {
+        transform: scale(1.05);
+    }
+
+#btnn {
+       transition: background 0.3s;
+}
+
+    .btnn:hover {
+        background-color: #0056b3;
+    }
+
+.card-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1;
+    min-width: 250px;
+}
+.container1 {
+     margin-left: 15px;
+     z-index: 1001;
+     margin-right: 15px;
+}
+.card-header
+{
+    background-color: white;
+}
+
+.navbar
+{
+     margin-top: 0;
+}
+
+
 
 </style>
 </head>
 
 <body>
-<form id="form1" runat="server">
-                <div class="topnav sticky-lg-top" id="myTopnav">
-                  <a href="#home" class="active">Home</a>
-                  <a href="javascript:void(0);" onclick="openNav()">Inventory</a>
-                  <a href="#contact">Contact</a>
-                  <a href="#about">About</a>
-                  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                   <i class="fa fa-bars"></i>
-                  </a>
-               </div>
+ <form id="form1" runat="server">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<div class="container1 sticky-lg-top">
+ <div class="row g-3" >
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Mwezi POS</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >
+  <span class="navbar-toggler-icon"></span>
+</button>
 
-            <div id="idInventory" class="overlay">
-             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times</a>
-                <div class="overlay-content">
-                <a href='<%= ResolveUrl( "~/Sources/Inventory/Iventoryadd.aspx" )%>'>Add Inventory</a>
-                <a href='<%= ResolveUrl( "~/Sources/Inventory/Inventory.aspx" )%>'>Update Inventory </a>
-                <a href='<%= ResolveUrl( "~/Sources/Inventory/Inventories.aspx" )%>'>Inventory Records</a>
+<div class="collapse navbar-collapse" id="navbarSupportedContent"> 
+      <div class="col-md-10 col-md-offset-1">
+     <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <asp:LinkButton ID="hmeb" runat="server" CssClass="nav-link"  OnClick="hmeb_Click" CausesValidation="false"><i class="fa fa-home text-success"></i> Home <span class="sr-only">(current)</span></asp:LinkButton>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-clipboard"></i> Inventory</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-users"></i> Employees
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <asp:LinkButton runat="server" ID="addub" CssClass="dropdown-item" OnClick="addub_Click" CausesValidation="false"> <i class=" fa fa-user-plus text-primary"></i> Add Users</asp:LinkButton>
+          <asp:LinkButton runat="server" ID="passb" CssClass="dropdown-item" OnClick="passb_Click" CausesValidation="false">  <i class="fa fa-key text-secondary"></i> Manage Passwords</asp:LinkButton>
+          <div class="dropdown-divider"></div>
+          <asp:LinkButton runat="server" ID="usereb" CssClass="dropdown-item" OnClick="usereb_Click" CausesValidation="false"> <i class="fas fa-user-edit"></i> Edit Users </asp:LinkButton>
+        </div>
+      </li>
+      </ul>
+    </div>
+      <div class="col-md-2 align-content-center">
+            <ul class="navbar-nav mr-auto"> 
+            
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-user-circle"></i>
+                </a>
+            
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <asp:LinkButton ID="LinkButn" runat="server" CssClass="dropdown-item text-primary" OnClick="LinkButn_Click" CausesValidation="false">
+                            <i class="fa fa-info-circle"></i> My Info
+                        </asp:LinkButton>
+                          <asp:LinkButton ID="btnLink" runat="server" CssClass="dropdown-item text-secondary" OnClick="btnLink_Click" CausesValidation="false">
+                            <i class="fa fa-key"></i> Change Password
+                        </asp:LinkButton>
+                  <div class="dropdown-divider"></div>
+                        <asp:LinkButton ID="btnOu" runat="server" CssClass="dropdown-item text-danger" OnClick="btnLogout_Click" CausesValidation="false">
+                            <i class="fa fa-sign-out-alt"></i> Logout
+                        </asp:LinkButton>
+                     </div>
+                </li>                
+            </ul>
+          </div>
+      </div>
+      
+</nav>
+</div>
+</div>
+
+        <div class="sidenav align-content-start">
+               <asp:LinkButton ID="btSale" CssClass="btn text-secondary btn-sm"  runat="server" OnClick="btSale_Click"  CausesValidation="false"><i class="fas fa-shopping-cart"></i> Make Sale</asp:LinkButton>
+              <asp:LinkButton runat="server" ID="btView"  CssClass="btn text-secondary  btn-sm" OnClick="btView_Click" CausesValidation="false" ><i class="fas fa-tags"></i> View Sales</asp:LinkButton>
+            <asp:LinkButton runat="server" ID="Recpt"  CssClass="btn text-secondary btn-sm" OnClick="Recpt_Click" CausesValidation="false" ><i class="fas fa-receipt"></i> Receipts</asp:LinkButton>
+              <a href="#clients">Clients</a>
+              <a href="#contact">Contact</a>
+        </div>
+             <div class="main"> 
+                 <div class="container">
+                <div id="idInventory" class="overlay">
+                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times</a>
+                 <div class="overlay-content">
+                 <asp:LinkButton runat="server" ID="addib" CssClass="btn text-success text-bg-light btn-sm" OnClick="addib_Click" CausesValidation="false"> <i class="fa fa-file"></i> <i class="fa fa-plus"></i> Add Inventory    </asp:LinkButton>
+                 <asp:LinkButton runat="server" ID="editib" CssClass="btn text-primary text-bg-light btn-sm" OnClick="editib_Click" CausesValidation="false"> <i class="fas fa-edit"></i> Update Inventory</asp:LinkButton>
+                 <asp:LinkButton runat="server" ID="recib" CssClass="btn text-secondary text-bg-light btn-sm" OnClick="recib_Click" CausesValidation="false"> <i class="fas fa-file-alt"></i> Inventory Records</asp:LinkButton>
+               </div>
+             </div>
+
+             <asp:Panel runat="server" ID="mainEdit" Visible="false">
+             <div  class="row g-3" >
+              <div class="col-md-12 col-md-offset-1">
+                        <div class="alert alert-success" role="alert">
+                            <h3 class="alert-heading">Self Update Form</h3>
+                            <p>Please fill in your information correctly</p>
+                        </div>
+                    </div>
+                       <div class="col-md-6 col-md-offset-1">
+                                <div class="form form-floating">
+                                    <input type="number"  id="Idno" runat="server" readonly="true" enabled="true" class="form-control" cssclass="input-sm" placeholder="Idno"/>
+                                    <label for="Idno" class="col-form-label-sm">Id Number</label>
+                                 </div>
+                        </div>
+                        <div class="col-md-6 col-md-offset-1">
+                                    <div class="form form-floating">
+                                   <input type="email" id="Email" name="mail" runat="server" enabled="true" class="form-control" cssclass="input-sm" placeholder="Email"/>
+                                    <label for="Email"  class="col-form-label-sm">Email</label>
+                                    </div>
+                         </div>
+                           <div class="col-md-12 col-md-offset-1">
+                                    <div class="form form-floating">
+                                   <input type="text" id="Name" runat="server" enabled="true" name="fname" class="form-control" cssclass="input-sm" placeholder="Name"/>
+                                    <label for="Name"  class="col-form-label-sm">Name</label>
+                                    </div>
+                              </div>
+                        <div class="col-md-4 col-md-offset-1">
+                                    <div class="form form-floating">
+                                   <input type="text" runat="server" id="Phone" enabled="true" class="form-control" name="phne" cssclass="input-sm" placeholder="+25470000000"/>
+                                    <label for="Phone"  class="col-form-label-sm">Phone Number</label>
+                                    </div>
+                                 </div> 
+                           
+                    <div class="col-md-4 col-md-offset-1">
+                               <div class="form form-floating">
+                                  <input type="date" runat="server" id="DOB" enabled="true" name="dateb" class="form-control" cssclass="input-sm"/>
+                                    <label for="DOB"  class="col-form-label-sm">Date of Birth</label>
+                                   </div>
+                              </div>
+                       <div class="col-md-4 col-md-offset-1">
+                                    <div class="form form-floating">
+                                   <input type="date" runat="server" id="RD" enabled="true" name="dater" class="form-control" cssclass="input-sm"/>
+                                   <label for="RD"  class="col-form-label-sm">Registration date</label>
+                                  </div>
+                              </div>
+                        <div class="col-md-12 col-md-offset-1">
+                            <div class="form form-floating">   
+                                <asp:DropDownList id="Gender" CssClass="form-select"  runat="server">
+                                    <asp:ListItem value="Male">Male</asp:ListItem>
+                                    <asp:ListItem value="Female">Female</asp:ListItem>
+                                    </asp:DropDownList>
+                                   <label for="Gender"  class="col-form-label-sm">Gender</label>
+                            </div>
+                          </div>  
+    
+                     <div class="col-md-12 col-md-offset-1">
+                       <div class="form form-floating">
+                          <input type="text" runat="server" id="Address" enabled="true" name="addrr" class="form-control" cssclass="input-sm" placeholder="1234 Nairobi"/>
+                            <label for="Address"  class="col-form-label-sm">Address</label>
+                           </div>
+                      </div>
+                    <div class="col-md-4 col-md-offset-1">
+                       <div class="form form-floating">
+                          <input type="text" runat="server" id="City" enabled="true" name="ctyy" class="form-control" cssclass="input-sm" placeholder="Nairobi"/>
+                            <label for="City"  class="col-form-label-sm">City</label>
+                           </div>
+                      </div>
+                 <div class="col-md-4">
+                     <div class="form form-floating">   
+                         <asp:DropDownList id="Country" CssClass="form-select"  runat="server">
+                        <asp:ListItem value="">Select Country</asp:ListItem>
+                         </asp:DropDownList>
+                          <label for="Country"  class="col-form-label-sm">Country</label>
+                         </div>
+                     </div>
+                   <div class="col-md-4">
+                     <div class="form form-floating">   
+                         <asp:DropDownList id="Role" CssClass="form-select"  runat="server" Enabled="false">
+                            <asp:ListItem value="Admin">Admin</asp:ListItem>
+                            <asp:ListItem value="Editor">Editor</asp:ListItem>
+                            <asp:ListItem value="User">User</asp:ListItem>                      
+                           </asp:DropDownList>
+                          <label for="Role"  class="col-form-label-sm">Role</label>
+                         </div>
+                     </div>
+                     <div class="col-md-4 col-md-offset-1">
+                      <asp:Button runat="server" Text="Save" ID="btnUpdate" OnClick="btnUpdate_Click" CssClass="btn btn-success btn-sm" Width="100%"></asp:Button>
+                      </div>
+                     <div class="col-md-4 col-md-offset-1">
+                      <asp:Button runat="server" ID="childCls" Text="Close" OnClick="childCls_Click" CssClass="btn btn-primary btn-sm" Width="100%"></asp:Button>
+                     </div>
+              </div>
+         </asp:Panel>
+
+        <asp:Panel runat="server" ID="mainEditp" Visible="false">
+            <div class="needs-validation">
+                <div class="mb-3">
+                <label class="form-label">Id</label>
+                 <input type="number"  id="Idpr" runat="server" readonly="true" enabled="true" class="form-control" cssclass="input-sm" required="required"/>
+                <div class="invalid-tooltip">
+                Please enter valid item id.
+              </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Name</label>
+                <input type="text"  id="nam" runat="server" enabled="true" class="form-control" cssclass="input-sm" required="required"/>
+                <div class="invalid-tooltip">
+                Please enter valid  name.
                 </div>
             </div>
-   
-    <div> 
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-
-
-
-            </asp:ContentPlaceHolder>
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+                 <input type="email"  id="mail" runat="server"  enabled="true" class="form-control" cssclass="input-sm" required="required"/>
+                <div class="invalid-tooltip">
+                Please enter valid price.
+              </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Password</label>
+                 <input type="password"  id="pass" runat="server"  enabled="true" class="form-control" cssclass="input-sm"/>
+                <div class="invalid-tooltip">
+                Please enter valid password.
+              </div>
         </div>
+    </div>
+ <div class="row g-3">
+        <div class="col-md-4 col-md-offset-1">
+            <asp:Button ID="btnpss" runat="server" Text="Update Password" CssClass="btn btn-success btn-sm" OnClick="btnpss_Click" Width="100%" />
+        </div>
+      <div class="col-md-4 col-md-offset-1">
+          <asp:Button runat="server" ID="cls" Text="Close" OnClick="cls_Click" CssClass="btn btn-primary btn-sm" Width="100%"></asp:Button>
+        </div>
+   </div>
+      </asp:Panel>
+
+             </div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+           </div>
     </form>
 </body>
 <script>
